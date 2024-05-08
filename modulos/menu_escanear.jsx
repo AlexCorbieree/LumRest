@@ -2,19 +2,19 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'; 
 import { useNavigation } from '@react-navigation/native';
 
-const menu_escanear = () => {
+const MenuEscaneo = () => {
   const navigation = useNavigation();
 
   const abrirEscanerQR = () => {
     // Aquí puedes agregar la lógica para abrir el escáner de código QR
-    // Por ahora, solo mostramos un mensaje en la consola
-    console.log("Abriendo escáner de código QR...");
+    // Por ahora, simplemente navegamos a la pantalla del menú
+    navigation.navigate('Menu1');
   };
 
   return (
     <View style={styles.container}>
       <Text style={styles.message}>Gracias por usar LumRest</Text>
-      <TouchableOpacity style={styles.scanMenuBtn}>
+      <TouchableOpacity style={styles.scanMenuBtn} onPress={abrirEscanerQR}>
         <Text style={styles.btnText}>Escanear código QR para desplegar el menú</Text>
       </TouchableOpacity>
     </View>
@@ -50,4 +50,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default menu_escanear;
+export default MenuEscaneo;
+
