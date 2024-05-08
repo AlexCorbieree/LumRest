@@ -6,8 +6,7 @@ const MenuEscaneo = () => {
   const navigation = useNavigation();
 
   const abrirEscanerQR = () => {
-    // Aquí puedes agregar la lógica para abrir el escáner de código QR
-    // Por ahora, simplemente navegamos a la pantalla del menú
+
     navigation.navigate('Menu1');
   };
 
